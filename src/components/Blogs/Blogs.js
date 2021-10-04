@@ -6,7 +6,7 @@ import Blog from "../Blog/Blog";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("/blogs.json")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
